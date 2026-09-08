@@ -54,7 +54,7 @@ packages:
   kind: ip
   source:
     path: spi
-  digest: sha256:60dc8d1b8a5368e1b0dd24de352ad79f
+  digest: sha256:31df814d4a7d9a1116b1090e2666bb05
 - name: timer
   version: 0.1.0
   kind: ip
