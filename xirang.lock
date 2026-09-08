@@ -6,43 +6,43 @@ packages:
   kind: library
   source:
     path: amba
-  digest: sha256:6e68171645ae543754e6bce87a081870
+  digest: sha256:5e08761cf23a4bb5e16863abfeb5dc06
 - name: gpio
   version: 0.1.0
   kind: ip
   source:
     path: gpio
-  digest: sha256:958b267c930b293e2766fbd382e40027
+  digest: sha256:b670276f223957346a6f811e7f7f036d
 - name: hwcore
   version: 0.1.0
   kind: library
   source:
     path: hwcore
-  digest: sha256:b4976d25b3e5636c63ad6926fdbc7b10
+  digest: sha256:f35cb8c679c2a7b6fdf7f85aff590da4
 - name: i2c
   version: 0.1.0
   kind: ip
   source:
     path: i2c
-  digest: sha256:714bc1f5fbacfc4daf4d0a7c61024177
+  digest: sha256:12165e613c8d68ee5e664c026902589d
 - name: pinmux
   version: 0.1.0
   kind: ip
   source:
     path: pinmux
-  digest: sha256:9658d491a0e92915372fa4e811bd8808
+  digest: sha256:46587ac9d62eee24a5e5b31d0bf63242
 - name: pwm
   version: 0.1.0
   kind: ip
   source:
     path: pwm
-  digest: sha256:7520c300777bd5990b1bd92108b8bf36
+  digest: sha256:4b263555b19618bdbf94c3e78570a7fb
 - name: rtc
   version: 0.1.0
   kind: ip
   source:
     path: rtc
-  digest: sha256:90116d8cba867eccc7523709086a39db
+  digest: sha256:7c1dddd71ac90a3ee3b9db6249e73acd
 - name: soc-mcu
   version: 0.1.0
   kind: ip
@@ -54,22 +54,22 @@ packages:
   kind: ip
   source:
     path: spi
-  digest: sha256:31df814d4a7d9a1116b1090e2666bb05
+  digest: sha256:1ed00190cd2772209d29847dfbe59f1d
 - name: timer
   version: 0.1.0
   kind: ip
   source:
     path: timer
-  digest: sha256:31e21bc008bc0c18eb99287f2760baf3
+  digest: sha256:5d4cbb78b93629fbc4b4d55a75082527
 - name: uart
   version: 0.1.0
   kind: ip
   source:
     path: uart
-  digest: sha256:1feb954e2cba2d6a1629dd6c00fe3444
+  digest: sha256:37eea76a0bebf0b14b5d7930c7b32ead
 - name: wdt
   version: 0.1.0
   kind: ip
   source:
     path: wdt
-  digest: sha256:53a26540b9320ca1f764fb424be83513
+  digest: sha256:22ceec15904f73f0939300392d1cf82f
