@@ -6,7 +6,7 @@ packages:
   kind: library
   source:
     path: amba
-  digest: sha256:ed322f63015a1f97fcee6091a001164e
+  digest: sha256:6e68171645ae543754e6bce87a081870
 - name: gpio
   version: 0.1.0
   kind: ip
@@ -24,19 +24,19 @@ packages:
   kind: ip
   source:
     path: i2c
-  digest: sha256:f64ddd8a79e913ea9d59c424e40773a4
+  digest: sha256:714bc1f5fbacfc4daf4d0a7c61024177
 - name: pinmux
   version: 0.1.0
   kind: ip
   source:
     path: pinmux
-  digest: sha256:3ad41011eaf8f391c65daed0170415d1
+  digest: sha256:9658d491a0e92915372fa4e811bd8808
 - name: pwm
   version: 0.1.0
   kind: ip
   source:
     path: pwm
-  digest: sha256:be871d3004b9d1c53e0f308e56e094ea
+  digest: sha256:7520c300777bd5990b1bd92108b8bf36
 - name: rtc
   version: 0.1.0
   kind: ip
@@ -54,7 +54,7 @@ packages:
   kind: ip
   source:
     path: spi
-  digest: sha256:98f968999ca128277b64305741ffd265
+  digest: sha256:5ef9af5c495c3b8134a55bbf5c6a5998
 - name: timer
   version: 0.1.0
   kind: ip
@@ -66,7 +66,7 @@ packages:
   kind: ip
   source:
     path: uart
-  digest: sha256:40bcd29387e9b905b49b4f285606ba85
+  digest: sha256:f04bbd1620701a375d06bcb3ee637d5e
 - name: wdt
   version: 0.1.0
   kind: ip
