@@ -54,19 +54,19 @@ packages:
   kind: ip
   source:
     path: spi
-  digest: sha256:5ef9af5c495c3b8134a55bbf5c6a5998
+  digest: sha256:60dc8d1b8a5368e1b0dd24de352ad79f
 - name: timer
   version: 0.1.0
   kind: ip
   source:
     path: timer
-  digest: sha256:f45e330d20ff8ec2607d381c036719c4
+  digest: sha256:31e21bc008bc0c18eb99287f2760baf3
 - name: uart
   version: 0.1.0
   kind: ip
   source:
     path: uart
-  digest: sha256:f04bbd1620701a375d06bcb3ee637d5e
+  digest: sha256:1feb954e2cba2d6a1629dd6c00fe3444
 - name: wdt
   version: 0.1.0
   kind: ip
