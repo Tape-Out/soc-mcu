@@ -1,0 +1,21 @@
+name: soc-mcu
+version: 0.1.0
+spec: "0.1"
+
+identity:
+  slug: soc-mcu-tapeout
+  display_name: Microcontroller reference SoC
+  category: soc
+  maturity: planned
+
+bus: apb4
+
+instances:
+  - name: gpio0
+    of: gpio
+    with: { numPins: 32, irq: true, bidir: true }
+    addr: 0x10000000
+  - name: gpio1
+    of: gpio
+    with: { numPins: 8, irq: false, bidir: false, debounce: false }
+    addr: 0x10000100
