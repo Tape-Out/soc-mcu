@@ -12,7 +12,7 @@ packages:
   kind: ip
   source:
     path: gpio
-  digest: sha256:c73a8939d8af79198baaf04ec63b9c2a
+  digest: sha256:958b267c930b293e2766fbd382e40027
 - name: hwcore
   version: 0.1.0
   kind: library
