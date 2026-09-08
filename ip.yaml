@@ -23,17 +23,6 @@ instances:
     bidir: false
     debounce: false
   addr: 268435712
-area:
-  base:
-    fixed: 240.0
-  model: single-point
-  error:
-    bound: 0.1
-    sign: over
-    note: decode overhead measured once at two instances (228.76); needs a curve
-  corner:
-    tool: ecc
-    pdk: ics55
-    freq_mhz: 100
-    measured: '2026-09-08'
-    generator: '0.3'
+deps:
+  hwcore: ^0.1
+  amba: ^0.1
