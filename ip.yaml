@@ -6,16 +6,19 @@ identity:
   display_name: Microcontroller reference SoC
   category: soc
   maturity: planned
+  summary: 'A microcontroller class SoC assembled entirely from the catalogue: no
+    RTL of its own.'
 bus: apb4
 instances:
-- name: gpio0
+- name: gpioa
   of: gpio
   with:
     numPins: 32
     irq: true
     bidir: true
+    debounce: true
   addr: 268435456
-- name: gpio1
+- name: gpiob
   of: gpio
   with:
     numPins: 8
@@ -23,6 +26,64 @@ instances:
     bidir: false
     debounce: false
   addr: 268435712
+- name: uart0
+  of: uart
+  with:
+    fifoDepth: 8
+    parity: true
+    flowctrl: false
+  addr: 268439552
+- name: uart1
+  of: uart
+  with:
+    fifoDepth: 4
+    parity: false
+    flowctrl: true
+  addr: 268439808
+- name: timer0
+  of: timer
+  with:
+    channels: 4
+    capture: true
+  addr: 268443648
+- name: pwm0
+  of: pwm
+  with:
+    channels: 4
+    deadtime: true
+  addr: 268447744
+- name: wdt0
+  of: wdt
+  with:
+    width: 32
+    window: true
+  addr: 268451840
+- name: spi0
+  of: spi
+  with:
+    fifoDepth: 8
+    csWidth: 2
+    quad: true
+  addr: 268455936
+- name: i2c0
+  of: i2c
+  with:
+    fifoDepth: 4
+    slave: false
+  addr: 268460032
+- name: rtc0
+  of: rtc
+  with:
+    alarms: 2
+    alarm: true
+  addr: 268464128
+- name: pinmux0
+  of: pinmux
+  with:
+    pins: 32
+    funcs: 4
+    padctl: true
+  addr: 268480512
 deps:
   hwcore: ^0.1
   amba: ^0.1

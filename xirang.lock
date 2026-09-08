@@ -1,0 +1,75 @@
+xirang-lock: 1
+top: soc-mcu
+packages:
+- name: amba
+  version: 0.1.0
+  kind: library
+  source:
+    path: amba
+  digest: sha256:ed322f63015a1f97fcee6091a001164e
+- name: gpio
+  version: 0.1.0
+  kind: ip
+  source:
+    path: gpio
+  digest: sha256:c73a8939d8af79198baaf04ec63b9c2a
+- name: hwcore
+  version: 0.1.0
+  kind: library
+  source:
+    path: hwcore
+  digest: sha256:b4976d25b3e5636c63ad6926fdbc7b10
+- name: i2c
+  version: 0.1.0
+  kind: ip
+  source:
+    path: i2c
+  digest: sha256:f64ddd8a79e913ea9d59c424e40773a4
+- name: pinmux
+  version: 0.1.0
+  kind: ip
+  source:
+    path: pinmux
+  digest: sha256:3ad41011eaf8f391c65daed0170415d1
+- name: pwm
+  version: 0.1.0
+  kind: ip
+  source:
+    path: pwm
+  digest: sha256:be871d3004b9d1c53e0f308e56e094ea
+- name: rtc
+  version: 0.1.0
+  kind: ip
+  source:
+    path: rtc
+  digest: sha256:90116d8cba867eccc7523709086a39db
+- name: soc-mcu
+  version: 0.1.0
+  kind: ip
+  source:
+    path: soc-mcu
+  digest: sha256:d0adde2a8c35953f7dc14c72fef2d9b9
+- name: spi
+  version: 0.1.0
+  kind: ip
+  source:
+    path: spi
+  digest: sha256:98f968999ca128277b64305741ffd265
+- name: timer
+  version: 0.1.0
+  kind: ip
+  source:
+    path: timer
+  digest: sha256:f45e330d20ff8ec2607d381c036719c4
+- name: uart
+  version: 0.1.0
+  kind: ip
+  source:
+    path: uart
+  digest: sha256:40bcd29387e9b905b49b4f285606ba85
+- name: wdt
+  version: 0.1.0
+  kind: ip
+  source:
+    path: wdt
+  digest: sha256:53a26540b9320ca1f764fb424be83513
