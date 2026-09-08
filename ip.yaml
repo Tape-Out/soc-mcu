@@ -1,21 +1,39 @@
 name: soc-mcu
 version: 0.1.0
-spec: "0.1"
-
+spec: '0.1'
 identity:
   slug: soc-mcu-tapeout
   display_name: Microcontroller reference SoC
   category: soc
   maturity: planned
-
 bus: apb4
-
 instances:
-  - name: gpio0
-    of: gpio
-    with: { numPins: 32, irq: true, bidir: true }
-    addr: 0x10000000
-  - name: gpio1
-    of: gpio
-    with: { numPins: 8, irq: false, bidir: false, debounce: false }
-    addr: 0x10000100
+- name: gpio0
+  of: gpio
+  with:
+    numPins: 32
+    irq: true
+    bidir: true
+  addr: 268435456
+- name: gpio1
+  of: gpio
+  with:
+    numPins: 8
+    irq: false
+    bidir: false
+    debounce: false
+  addr: 268435712
+area:
+  base:
+    fixed: 240.0
+  model: single-point
+  error:
+    bound: 0.1
+    sign: over
+    note: decode overhead measured once at two instances (228.76); needs a curve
+  corner:
+    tool: ecc
+    pdk: ics55
+    freq_mhz: 100
+    measured: '2026-09-08'
+    generator: '0.3'
