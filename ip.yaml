@@ -6,10 +6,26 @@ identity:
   display_name: Microcontroller reference SoC
   category: soc
   maturity: planned
-  summary: 'A microcontroller class SoC assembled entirely from the catalogue: no
-    RTL of its own.'
+  summary: 'A microcontroller class SoC assembled entirely from the catalogue: a core,
+    on chip memory, the timer, and eleven peripherals, with no RTL of its own.'
 bus: apb4
 instances:
+- name: cpu
+  of: hart
+  with:
+    mul: true
+    smode: false
+- name: mem
+  of: sram
+  with:
+    words: 256
+  addr: 2147483648
+- name: clint
+  of: aclint
+  with:
+    harts: 1
+    ssip: false
+  addr: 33554432
 - name: gpioa
   of: gpio
   with:
