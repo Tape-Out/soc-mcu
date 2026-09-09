@@ -25,10 +25,27 @@ SRC = [
     "  sw   t2, 0(a1)",
     "  lw   t3, 0(a1)",          # 穿过同一张地址图去够另一个设备
     "  sw   t3, 0x7F8(a0)",
+    # 计时器中断：装配把 clint 的 mtip 接到核上了没有，只有这一条能证明
+    "  lui  t0, hi(mtrap)",
+    "  addi t0, t0, lo(mtrap)",
+    "  csrrw zero, 0x305, t0",    # mtvec
+    "  addi t2, zero, 40",
+    "  sw   t2, 0(a1)",           # mtimecmp 低 32 位
+    "  sw   zero, 4(a1)",         # 高 32 位
+    "  addi t2, zero, 0x80",
+    "  csrrs zero, 0x304, t2",    # mie.mtie
+    "  addi t2, zero, 8",
+    "  csrrs zero, 0x300, t2",    # mstatus.mie
     "done:",
     "  jal  zero, done",
+    # 处理程序不返回：mtime 只会越走越大，回去就再进一次
+    "mtrap:",
+    "  addi t3, zero, 0xAB",
+    "  sw   t3, 0x7FC(a0)",
+    "stop:",
+    "  jal  zero, stop",
 ]
-EXPECT = [(RES, 42), (RES + 4, 1), (RES + 8, 0x123)]
+EXPECT = [(RES, 42), (RES + 4, 1), (RES + 8, 0x123), (RES + 12, 0xAB)]
 
 prog = assemble(SRC)
 out = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".")
@@ -85,6 +102,7 @@ module mkSocTb(Empty);
   Reg#(Bit#(2))  st   <- mkReg(0);   // APB4 的两拍：0 建立，1 访问
   Reg#(Bit#(32)) wait_ <- mkReg(0);
   Reg#(Bool)     bad  <- mkReg(False);
+  Reg#(Bit#(2))  tick <- mkReg(0);
 
   Bool loading = ph == Load;
   Bool reading = ph == Read;
@@ -100,11 +118,16 @@ module mkSocTb(Empty);
                 loading, wdat, 4'hF);
     soc.cpu_pins.halt(ph == Load);
     soc.cpu_pins.hartid(1);
-    soc.cpu_pins.irq(False, False, False);
-    soc.clint_pins.tick(0);
+    // 计时器的时基由外面给。原来一直按在 0，mtime 一拍都不走——
+    // 那样「计时器中断」这条判据永远是绿的，因为它根本没机会红。
+    soc.clint_pins.tick(tick[0]);
     soc.plic0_pins.src(0);
     soc.uart0_pins.rxd(1);
     soc.uart0_pins.cts(1);
+  endrule
+
+  rule ticking;
+    tick <= tick + 1;
   endrule
 
   rule step;
@@ -120,7 +143,7 @@ module mkSocTb(Empty);
       end
       Run: begin
         // 放开核，给它跑完的时间
-        if (wait_ > 4000) begin ph <= Read; idx <= 0; st <= 0; end
+        if (wait_ > 6000) begin ph <= Read; idx <= 0; st <= 0; end
         else wait_ <= wait_ + 1;
       end
       Read: begin

@@ -24,7 +24,7 @@ packages:
   kind: ip
   source:
     path: hart
-  digest: sha256:b782d27a7b875fd4640938f81d8cc596
+  digest: sha256:f1ebe4b6c8ec5d4f488aed058046773d
 - name: hwcore
   version: 0.1.0
   kind: library
@@ -60,7 +60,7 @@ packages:
   kind: ip
   source:
     path: soc-mcu
-  digest: sha256:11b0abf6968508d2328e7eea5e210313
+  digest: sha256:b04240ecb501f87f149b19f893ab8ed7
 - name: spi
   version: 0.1.0
   kind: ip
