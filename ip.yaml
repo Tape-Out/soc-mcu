@@ -105,8 +105,9 @@ deps:
   amba: ^0.1
 connect:
 - to: cpu.irq.irq
-  desc: 这颗没有 plic，外部中断线接地；软件中断与计时器照接
+  desc: 这颗没有 plic，外部中断线接地；没有 S 级，SSWI 那根也接地
   args:
   - clint.msip[0] == 1
   - clint.mtip[0] == 1
+  - 'False'
   - 'False'
