@@ -8,7 +8,7 @@ import pathlib
 import sys
 
 here = pathlib.Path(__file__).resolve().parent
-src = (here / "mksoctb.py").read_text(encoding="utf-8")
+src = (here / "tbskel.py").read_text(encoding="utf-8")
 
 IMPORTS = "\n".join([
     "import GpioGen::*;",
@@ -44,5 +44,5 @@ src = src.replace("    soc.plic0_pins.src(0);\n", PINS)
 src = src.replace('(out / "SocTb.bsv")', '(out / "McuTb.bsv")')
 src = src.replace("package SocTb;", "package McuTb;")
 src = src.replace("module mkSocTb(Empty);", "module mkMcuTb(Empty);")
-g = {"__name__": "__main__", "__file__": str(here / "mksoctb.py"), "sys": sys}
+g = {"__name__": "__main__", "__file__": str(here / "tbskel.py"), "sys": sys}
 exec(compile(src, "mkmcutb", "exec"), g)
