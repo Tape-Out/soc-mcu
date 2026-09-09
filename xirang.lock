@@ -24,13 +24,13 @@ packages:
   kind: ip
   source:
     path: hart
-  digest: sha256:f1ebe4b6c8ec5d4f488aed058046773d
+  digest: sha256:81c29f377a03db899e2a2f1aee9d30df
 - name: hwcore
   version: 0.1.0
   kind: library
   source:
     path: hwcore
-  digest: sha256:f35cb8c679c2a7b6fdf7f85aff590da4
+  digest: sha256:858489a9c20e52516644993de4506cd8
 - name: i2c
   version: 0.1.0
   kind: ip
