@@ -1,6 +1,12 @@
 xirang-lock: 1
 top: soc-mcu
 packages:
+- name: aclint
+  version: 0.1.0
+  kind: ip
+  source:
+    path: aclint
+  digest: sha256:91a0028176e8fd715269c85a7d0cbb67
 - name: amba
   version: 0.1.0
   kind: library
@@ -13,6 +19,12 @@ packages:
   source:
     path: gpio
   digest: sha256:b670276f223957346a6f811e7f7f036d
+- name: hart
+  version: 0.1.0
+  kind: ip
+  source:
+    path: hart
+  digest: sha256:b782d27a7b875fd4640938f81d8cc596
 - name: hwcore
   version: 0.1.0
   kind: library
@@ -30,7 +42,7 @@ packages:
   kind: ip
   source:
     path: pinmux
-  digest: sha256:46587ac9d62eee24a5e5b31d0bf63242
+  digest: sha256:599727b0b2e09c9c647be07533132af4
 - name: pwm
   version: 0.1.0
   kind: ip
@@ -48,13 +60,19 @@ packages:
   kind: ip
   source:
     path: soc-mcu
-  digest: sha256:d0adde2a8c35953f7dc14c72fef2d9b9
+  digest: sha256:11b0abf6968508d2328e7eea5e210313
 - name: spi
   version: 0.1.0
   kind: ip
   source:
     path: spi
-  digest: sha256:1ed00190cd2772209d29847dfbe59f1d
+  digest: sha256:eec5196869614ccd9e8ec3128561122f
+- name: sram
+  version: 0.1.0
+  kind: ip
+  source:
+    path: sram
+  digest: sha256:cf3b06696a9bb4e1af0c8e9e3f6a821a
 - name: timer
   version: 0.1.0
   kind: ip
