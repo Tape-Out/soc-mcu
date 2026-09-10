@@ -78,7 +78,7 @@ packages:
   kind: ip
   source:
     path: timer
-  digest: sha256:abc4fd2702a65b9b2f2761e9621d4063
+  digest: sha256:4956a77fbeba61fbbfd3483b1a93df4c
 - name: uart
   version: 0.1.0
   kind: ip
