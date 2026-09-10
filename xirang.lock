@@ -48,13 +48,13 @@ packages:
   kind: ip
   source:
     path: pwm
-  digest: sha256:4b263555b19618bdbf94c3e78570a7fb
+  digest: sha256:954ca8b2ffd36775acee4f8eb6a18e8a
 - name: rtc
   version: 0.1.0
   kind: ip
   source:
     path: rtc
-  digest: sha256:41ea453e2399cfc4fa26c1715c526857
+  digest: sha256:1d9334b2c42731db0a6de605de9d86d6
 - name: soc-mcu
   version: 0.1.0
   kind: ip
@@ -90,4 +90,4 @@ packages:
   kind: ip
   source:
     path: wdt
-  digest: sha256:22ceec15904f73f0939300392d1cf82f
+  digest: sha256:7f1758d8b6c2001cbac0f7315cebec8c
