@@ -36,7 +36,7 @@ packages:
   kind: ip
   source:
     path: i2c
-  digest: sha256:b460ffad64b2b32f56c389d2596e49d3
+  digest: sha256:e783547ee2eee13ef11f2bfff075dc4c
 - name: pinmux
   version: 0.1.0
   kind: ip
@@ -84,7 +84,7 @@ packages:
   kind: ip
   source:
     path: uart
-  digest: sha256:37cccee7b789f61c9f54e5cd6e0b9a54
+  digest: sha256:b1e6c361198f6aed764fe6346362a889
 - name: wdt
   version: 0.1.0
   kind: ip
