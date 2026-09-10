@@ -12,7 +12,7 @@ packages:
   kind: library
   source:
     path: amba
-  digest: sha256:88b658d88a74c8a0b1c5c9e14c000463
+  digest: sha256:c5061feaa27b8aa1752119d0d163154c
 - name: gpio
   version: 0.1.0
   kind: ip
@@ -30,7 +30,7 @@ packages:
   kind: library
   source:
     path: hwcore
-  digest: sha256:c804a53733bd511dfd5c5f766e873efe
+  digest: sha256:056bc7c82ffae7f439c3f1916f846ac2
 - name: i2c
   version: 0.1.0
   kind: ip
