@@ -6,37 +6,37 @@ packages:
   kind: ip
   source:
     path: aclint
-  digest: sha256:91a0028176e8fd715269c85a7d0cbb67
+  digest: sha256:c82e2c4d8a0b07f289df92a7142baa90
 - name: amba
   version: 0.1.0
   kind: library
   source:
     path: amba
-  digest: sha256:5e08761cf23a4bb5e16863abfeb5dc06
+  digest: sha256:88b658d88a74c8a0b1c5c9e14c000463
 - name: gpio
   version: 0.1.0
   kind: ip
   source:
     path: gpio
-  digest: sha256:b670276f223957346a6f811e7f7f036d
+  digest: sha256:26868e7e9d9c51a1a1020d80aea8c6c7
 - name: hart
   version: 0.1.0
   kind: ip
   source:
     path: hart
-  digest: sha256:81c29f377a03db899e2a2f1aee9d30df
+  digest: sha256:08b284e436ec04365fa388d0cd8ee3ec
 - name: hwcore
   version: 0.1.0
   kind: library
   source:
     path: hwcore
-  digest: sha256:858489a9c20e52516644993de4506cd8
+  digest: sha256:c804a53733bd511dfd5c5f766e873efe
 - name: i2c
   version: 0.1.0
   kind: ip
   source:
     path: i2c
-  digest: sha256:12165e613c8d68ee5e664c026902589d
+  digest: sha256:b460ffad64b2b32f56c389d2596e49d3
 - name: pinmux
   version: 0.1.0
   kind: ip
@@ -54,37 +54,37 @@ packages:
   kind: ip
   source:
     path: rtc
-  digest: sha256:7c1dddd71ac90a3ee3b9db6249e73acd
+  digest: sha256:41ea453e2399cfc4fa26c1715c526857
 - name: soc-mcu
   version: 0.1.0
   kind: ip
   source:
     path: soc-mcu
-  digest: sha256:b04240ecb501f87f149b19f893ab8ed7
+  digest: sha256:e0738cf6663468b8bfc386469f1dc4c0
 - name: spi
   version: 0.1.0
   kind: ip
   source:
     path: spi
-  digest: sha256:eec5196869614ccd9e8ec3128561122f
+  digest: sha256:62f9772d386c3e3c671d6568349852b9
 - name: sram
   version: 0.1.0
   kind: ip
   source:
     path: sram
-  digest: sha256:cf3b06696a9bb4e1af0c8e9e3f6a821a
+  digest: sha256:ad9c19f8c5900569d241f333b4186115
 - name: timer
   version: 0.1.0
   kind: ip
   source:
     path: timer
-  digest: sha256:5d4cbb78b93629fbc4b4d55a75082527
+  digest: sha256:abc4fd2702a65b9b2f2761e9621d4063
 - name: uart
   version: 0.1.0
   kind: ip
   source:
     path: uart
-  digest: sha256:37eea76a0bebf0b14b5d7930c7b32ead
+  digest: sha256:37cccee7b789f61c9f54e5cd6e0b9a54
 - name: wdt
   version: 0.1.0
   kind: ip
