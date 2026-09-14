@@ -42,7 +42,7 @@ packages:
   kind: ip
   source:
     path: pinmux
-  digest: sha256:599727b0b2e09c9c647be07533132af4
+  digest: sha256:8a6a6170899e191e0d2034ff90a9574b
 - name: pwm
   version: 0.1.0
   kind: ip
