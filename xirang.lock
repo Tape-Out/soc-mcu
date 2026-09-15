@@ -24,7 +24,7 @@ packages:
   kind: ip
   source:
     path: hart
-  digest: sha256:4adcbe64defeb95f1c933b3e1a182298
+  digest: sha256:3a10b599c56ed78830b1e2945f182751
 - name: hwcore
   version: 0.1.0
   kind: library
@@ -42,7 +42,7 @@ packages:
   kind: ip
   source:
     path: pinmux
-  digest: sha256:95d9e3d1a1fddd80b7f6697ba43f6280
+  digest: sha256:57dce2fe7eb688d3c46ea10c379e04d4
 - name: pwm
   version: 0.1.0
   kind: ip
@@ -66,7 +66,7 @@ packages:
   kind: ip
   source:
     path: spi
-  digest: sha256:d7f12d015d977dcc42abca6ee64005b6
+  digest: sha256:7c0e88f0e0c7f719ea8867316bcc0932
 - name: sram
   version: 0.1.0
   kind: ip
