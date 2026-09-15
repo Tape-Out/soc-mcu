@@ -30,13 +30,13 @@ packages:
   kind: library
   source:
     path: hwcore
-  digest: sha256:f23e8ba4e43310b13588fba6b838b619
+  digest: sha256:4704e2bd8019d8274e5d14ddf8779086
 - name: i2c
   version: 0.1.0
   kind: ip
   source:
     path: i2c
-  digest: sha256:aff0084863ad9d0190caa05b31d53f21
+  digest: sha256:9dfba4a71649227b4a8cd939add31c94
 - name: pinmux
   version: 0.1.0
   kind: ip
