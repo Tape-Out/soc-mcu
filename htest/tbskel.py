@@ -57,7 +57,7 @@ chk = "\n".join(f"      {i}: return tuple2(32'h{0x80000000 + a:08X}, "
 
 (out / "SocProg.bsv").write_text(f"""package SocProg;
 
-// 由 tb/mksoctb.py 生成，勿手改。
+// 由 htest/mksoctb.py 生成，勿手改。
 
 Integer progLen = {len(prog)};
 Integer chkLen  = {len(EXPECT)};
