@@ -79,7 +79,7 @@ instances:
   with:
     fifoDepth: 8
     csWidth: 2
-    quad: true
+    lines: 4
   addr: 268455936
 - name: i2c0
   of: i2c
