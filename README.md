@@ -11,7 +11,16 @@ bus-neutral contracts in [`hwcore`](https://github.com/Tape-Out/hwcore), assembl
 
 ## Status
 
-Planned. The entry in [`index`](https://github.com/Tape-Out/index) tracks what lands when.
+Assembled and tested end to end in CI; the badge stays at `planned` while the assembler is being reworked.
+
+| Part | Repository | Configuration |
+|:--:|:--:|:--:|
+| core | [`hart`](https://github.com/Tape-Out/hart) | RV32IM, machine mode only, no MMU |
+| memory | [`sram`](https://github.com/Tape-Out/sram) | 256 words (1 KiB) at `0x8000_0000` |
+| timer and software interrupt | [`aclint`](https://github.com/Tape-Out/aclint) | one hart |
+| peripherals | `gpio` ×2 · `uart` ×2 · `timer` · `pwm` · `wdt` · `spi` · `i2c` · `rtc` · `pinmux` | at `0x1000_xxxx` |
+
+The core's two ports and an external APB4 port share one switch, round-robin among the on-chip managers. There is no interrupt controller: only the CLINT's software and timer interrupts reach the core, and the peripherals' interrupt lines come out as the top-level `irqs` vector.
 
 ## License
 
