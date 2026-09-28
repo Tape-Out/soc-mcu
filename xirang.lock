@@ -19,12 +19,6 @@ packages:
   source:
     path: gpio
   digest: sha256:26868e7e9d9c51a1a1020d80aea8c6c7
-- name: hart
-  version: 0.1.0
-  kind: ip
-  source:
-    path: hart
-  digest: sha256:29fe6720ad2a06edfb05b26a5bcef61e
 - name: hwcore
   version: 0.1.0
   kind: library
@@ -55,6 +49,12 @@ packages:
   source:
     path: rtc
   digest: sha256:6a4fea8f981a07667c522e2b02e765b0
+- name: rvcore
+  version: 0.1.0
+  kind: ip
+  source:
+    path: rvcore
+  digest: sha256:62999a0327451edd9ed32cfdc635daaa
 - name: rvfi
   version: 0.1.0
   kind: library
@@ -66,7 +66,7 @@ packages:
   kind: ip
   source:
     path: soc-mcu
-  digest: sha256:a7ad952ff56993433811ad99d02bd9ab
+  digest: sha256:a45a4bcbe7d768d14430d659830fd8ab
 - name: spi
   version: 0.1.0
   kind: ip

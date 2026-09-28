@@ -1,6 +1,6 @@
 # soc-mcu
 
-Microcontroller reference SoC: one core, on-chip memory, the common peripherals.
+Microcontroller reference SoC: one core, on-chip memory, the common peripherals. No MMU; the Linux target on this line is no-MMU Linux. The MMU line is [`soc-mpu`](https://github.com/Tape-Out/soc-mpu).
 
 ![maturity](https://img.shields.io/badge/maturity-planned-lightgrey) ![license](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0%20OR%20MulanPSL--2.0-blue)
 
@@ -15,7 +15,7 @@ Assembled and tested end to end in CI; the badge stays at `planned` while the as
 
 | Part | Repository | Configuration |
 |:--:|:--:|:--:|
-| core | [`hart`](https://github.com/Tape-Out/hart) | RV32IM, machine mode only, no MMU |
+| core | [`rvcore`](https://github.com/Tape-Out/rvcore) | RV32IM, machine mode only, no MMU |
 | memory | [`sram`](https://github.com/Tape-Out/sram) | 256 words (1 KiB) at `0x8000_0000` |
 | timer and software interrupt | [`aclint`](https://github.com/Tape-Out/aclint) | one hart |
 | peripherals | `gpio` ×2 · `uart` ×2 · `timer` · `pwm` · `wdt` · `spi` · `i2c` · `rtc` · `pinmux` | at `0x1000_xxxx` |

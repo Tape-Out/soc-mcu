@@ -11,7 +11,7 @@ identity:
 bus: apb4
 instances:
 - name: cpu
-  of: hart
+  of: rvcore
   with:
     mul: true
     smode: false
