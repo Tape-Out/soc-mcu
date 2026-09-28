@@ -4,6 +4,7 @@
 而它们的输入引脚都是 always_enabled，**每拍必须有值**。空着不是「不连」，
 bsc 会判条件恒假（G0066）并把要驱动的方法逐个列出来——照着补即可。
 """
+import json
 import pathlib
 import sys
 
@@ -35,6 +36,27 @@ PINS = "\n".join([
     "    soc.pinmux0_pins_if.pad_i(0);",
     "",
 ])
+
+knobs = json.loads(sys.argv[2])["knobs"] if len(sys.argv) > 2 else {}
+
+
+def swap(old: str, new: str) -> None:
+    # 骨架改了而这里没跟上，替换就静默落空，生成的还是原样那份
+    global src
+    if src.count(old) != 1:
+        raise SystemExit(f"骨架里找不到这一段：{old.strip()[:40]}")
+    src = src.replace(old, new)
+
+
+if knobs.get("cpu.mul", True):
+    # 乘法关着时这是非法指令，那时 mtvec 还没设，核会跑飞
+    swap('    "  sw   t3, 0x7F8(a0)",\n',
+         '    "  sw   t3, 0x7F8(a0)",\n'
+         '    "  addi t4, zero, 7",\n'
+         '    "  addi t5, zero, 6",\n'
+         '    "  mul  t6, t4, t5",\n'
+         '    "  sw   t6, 0x7EC(a0)",\n')
+    swap("EXPECT = [(RES, 42),", "EXPECT = [(RES - 4, 42), (RES, 42),")
 
 src = src.replace("soc-linux 的端到端测试台", "soc-mcu 的端到端测试台")
 src = src.replace("import SocLinuxPkg::*;", "import SocMcuPkg::*;")

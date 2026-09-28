@@ -111,3 +111,6 @@ connect:
   - clint.mtip[0] == 1
   - 'False'
   - 'False'
+test:
+  # 同步存储改的是总线时序，只有装进 SoC 才看得出对不对
+  axes: [cpu.mul, cpu.smode, mem.words, mem.sync]
