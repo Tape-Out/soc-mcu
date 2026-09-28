@@ -54,7 +54,7 @@ packages:
   kind: ip
   source:
     path: rvcore
-  digest: sha256:62999a0327451edd9ed32cfdc635daaa
+  digest: sha256:cdba93e4d8f750753bc053e5934944dc
 - name: rvfi
   version: 0.1.0
   kind: library
@@ -78,7 +78,7 @@ packages:
   kind: ip
   source:
     path: sram
-  digest: sha256:c36baf50bced22dc66d0860e075aaec1
+  digest: sha256:8438114cfd67aef4853cd4decb3eed0f
 - name: timer
   version: 0.1.0
   kind: ip
