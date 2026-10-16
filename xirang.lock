@@ -12,7 +12,7 @@ packages:
   kind: library
   source:
     path: amba
-  digest: sha256:d3705f25fbcad6457cff68399ff5c5aa
+  digest: sha256:580eb25b187d414bd3343818e5cec023
 - name: gpio
   version: 0.1.0
   kind: ip
